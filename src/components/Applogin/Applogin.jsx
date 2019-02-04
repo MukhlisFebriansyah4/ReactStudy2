@@ -35,7 +35,7 @@ class Container extends Component {
                                 <h3>
                                     Dengan melakukan perdaftaran. Saya setuju dengan <span style={{color:'red'}}>Kebijakan Privasi</span> dan <span style={{color:'red'}}>Syarat & Ketentuan</span> monggopesan.com
                                 </h3>
-                                <Button type="primary" htmlType="submit" className="login-form-button" style={{width:'360px',height:'48px',backgroundColor:'#007E80',marginTop:'16px'}}>
+                                <Button type="primary" htmlType="submit" className="login-form-button" style={{width:'360px',height:'48px',backgroundColor:'#007E80',marginTop:'16px',color:'White'}}>
                                     Daftar
                                 </Button>
                                 <div style={{display:'flex',alignItems:'center',padding: '16px 0px 16px 24px'}}>
