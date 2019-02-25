@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Student from './Student.jsx'
+import {Consumer} from '../context'
 
-class Students extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-        const {name, email , phone} = this.props
+class Students extends Component {    
+    
+    render() {         
         return ( 
-            <div>
-                <h1>{name}</h1>
-                <ul>
-                    <li>{email}</li>
-                    <li>{phone}</li>
-                </ul>
-            </div>
+            <Consumer>
+                {value => {
+                    const {students} = value
+                    return(
+                        <div>
+                            {students.map(student =>(
+                                <Student 
+                                key = {student.id}                
+                                student= {student}                                
+                                />
+                            ))}
+                        </div>
+                    )
+                }}
+            </Consumer>                            
          );
     }
 }
