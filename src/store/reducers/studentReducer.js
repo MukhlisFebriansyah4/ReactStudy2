@@ -20,8 +20,7 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 students : [action.payload, ...state.students] 
-            }
-            console.log(state)
+            }            
         default:
             return state
     }

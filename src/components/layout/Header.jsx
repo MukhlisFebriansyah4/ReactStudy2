@@ -22,6 +22,8 @@ const Headers = () => {
                     >
                         <Menu.Item key="1">Students List</Menu.Item>
                         <Menu.Item key="2"><Link to="/">Home</Link></Menu.Item>
+                        <Menu.Item><Link to="/login">Login</Link></Menu.Item>                        
+                        <Menu.Item><Link to="/register">Register</Link></Menu.Item>                        
                         <Menu.Item><Link to="/student/add">Add Student</Link></Menu.Item>
                         <Menu.Item ><Link to="/about">About</Link></Menu.Item>                        
                     </Menu>

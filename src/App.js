@@ -12,7 +12,7 @@ import About from './components/pages/about'
 import NotFound from './components/pages/notfound';
 import EditStudents from './components/students/EditStudent'
 import formlogin from './components/Formlogin/formlogin'
-import registers from './components/Formlogin/register'
+import Registerstudent from './components/Formlogin/register'
 import { Provider } from 'react-redux'
 import store from './store/store'
 
@@ -28,7 +28,7 @@ class App extends Component {
               <Route exact path='/' component={Students}/>
               <Route exact path='/student/add' component={AddStudent} />
               <Route exact path='/login' component={formlogin} />
-              <Route exact path='/register' component={registers} />
+              <Route exact path='/register' component={Registerstudent} />
               <Route exact path='/about' component={About} />              
               <Route exact path='/student/edit/:id' component={EditStudents} />              
               <Route component={NotFound} />
