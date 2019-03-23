@@ -1,0 +1,14 @@
+ .login-form {
+    max-width: 300px;
+    margin: 50px 500px;
+  }
+   .login-form-forgot {
+    float: right;
+  }
+   .login-form-button {
+    width: 100%;
+  }
+  .ant-form.ant-form-horizontal{
+    max-width: 500px;
+    margin: 50px 500px;
+  }

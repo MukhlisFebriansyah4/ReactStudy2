@@ -1,5 +1,6 @@
 import React from 'react';
-import {  Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import {Link} from 'react-router-dom'
 const { Header, Content, Footer } = Layout;
 
 const Headers = () => {
@@ -20,8 +21,9 @@ const Headers = () => {
                         style={{ lineHeight: '64px' }}
                     >
                         <Menu.Item key="1">Students List</Menu.Item>
-                        <Menu.Item key="2">Home</Menu.Item>
-                        
+                        <Menu.Item key="2"><Link to="/">Home</Link></Menu.Item>
+                        <Menu.Item><Link to="/student/add">Add Student</Link></Menu.Item>
+                        <Menu.Item ><Link to="/about">About</Link></Menu.Item>                        
                     </Menu>
                 </Header>   
             </Layout>

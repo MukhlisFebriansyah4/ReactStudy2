@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col ,Form, Icon, Input, Button, } from 'antd';
 import gambarregister from '../../assets/img/login.jpg'
 import gambarlogo from '../../assets/img/logo.jpg'
-import Buttons from '../Button.jsx'
+import Buttons from '../layout/Button'
 import './Applogin.css'
 // import ColumnGroup from 'antd/lib/table/ColumnGroup';
 class Container extends Component {    

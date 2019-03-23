@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Card , Icon } from 'antd';
-import {Consumer} from '../context'
+import { Card, Icon } from 'antd';
+import axios from 'axios';
+import {Link} from 'react-router-dom'
+// import { connect } from 'http2';
+import { deleteStudent } from '../../store/actions/studentAction'
+import {connect} from 'react-redux'
 
 class Student extends Component {
     constructor(props) {
@@ -15,23 +19,21 @@ class Student extends Component {
             istoggleon: !this.state.istoggleon
         })
     } 
-    onDelete = (id, dispatch) => {
-        dispatch({type:'DELETE_STUDENT', payload: id})
+    onDelete = (id) => {        
+        console.log(id);
+        this.props.deleteStudent(id)
     }
     render() { 
         const{student} = this.props
-        const{istoggleon} = this.state
-        return (
-            <Consumer>
-                {value => {
-                    const {dispatch} = value
+        const{istoggleon} = this.state                    
                     return(
                         <div>
                             <Card>               
                                 <div style={{display:'flex'}}>
                                     <h1>{student.name}</h1>
                                     <Icon onClick={this.onShowClick} type="caret-down" theme="filled" />
-                                    <Icon onClick={this.onDelete.bind(this, student.id, dispatch)} type="delete" theme="filled" />
+                                    <Icon onClick={this.onDelete.bind(this, student.id)}type="delete" theme="filled" />
+                                    <Link to={`student/edit/${student.id}`}><Icon type="edit" theme="filled" /></Link>                                    
                                 </div>
                                     { istoggleon ? (
                                 <div>
@@ -41,12 +43,12 @@ class Student extends Component {
                                 ):null}
                             </Card>                                    
                         </div>
-                    )
-                }}
-            </Consumer> 
+                                    
             
         );
     }
 }
  
-export default Student;
+// export default Student;
+
+export default connect(null, { deleteStudent})(Student)
